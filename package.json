@@ -15,7 +15,7 @@
     "startServer": "npm run build && node ./build/bundle.cjs",
     "test": "jest",
     "dev:test": "node node_modules/jest/bin/jest.js --silent=false --verbose",
-    "dev:test:unit": "node node_modules/jest/bin/jest.js --silent=false --verbose __test__/controllers/resetPassword.test.js"
+    "dev:test:unit": "node node_modules/jest/bin/jest.js --silent=false --verbose __test__/models/userToDo.model.test.js"
   },
   "author": "",
   "license": "ISC",

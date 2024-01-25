@@ -24,8 +24,10 @@ describe("POST /api/auth/login", () => {
     let res;
     let next;
 
+
     const errorControllerMock = errorController;
     errorControllerMock.mockImplementation(async (error, res) => {
+        console.log(error);
         return (error, res)
     });
 

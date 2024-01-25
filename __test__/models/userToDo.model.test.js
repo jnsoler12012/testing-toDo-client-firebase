@@ -12,6 +12,6 @@ describe('src/models/User', () => {
 
         console.log(Attributes, listAttributes);
         expect(UserModel.name).toBe('userToDo')
-        expect(listAttributes).toEqual(['id', 'email', 'password', 'createdAt', 'updatedAt'])
+        expect(listAttributes).toEqual(['id', 'email', "name", 'password', "imageRef", 'createdAt', 'updatedAt'])
     })
 })

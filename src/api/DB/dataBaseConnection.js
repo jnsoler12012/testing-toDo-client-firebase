@@ -4,22 +4,22 @@ const URL = process.env.WEBPACK_URL_DB || 'postgres://mainuser:8AQluCn0KKyEy7FSq
 
 console.log(URL);
 
-const dataBaseConnection = new Sequelize(URL, {
-    dialectOptions: {
-        ssl: true,
-        useUTC: true, // -->Add this line. for reading from database
-    },
-    timezone: '-05:00', // -->Add this line. for writing to database
-})
-
-
-// const dataBaseConnection = new Sequelize('TaskMaster', 'postgres', 'test', {
-//     host: 'localhost',
-//     dialect: 'postgres',
+// const dataBaseConnection = new Sequelize(URL, {
 //     dialectOptions: {
+//         ssl: true,
 //         useUTC: true, // -->Add this line. for reading from database
 //     },
 //     timezone: '-05:00', // -->Add this line. for writing to database
-// });
+// })
+
+
+const dataBaseConnection = new Sequelize('TaskMaster', 'postgres', 'test', {
+    host: 'localhost',
+    dialect: 'postgres',
+    dialectOptions: {
+        useUTC: true, // -->Add this line. for reading from database
+    },
+    timezone: '-05:00', // -->Add this line. for writing to database
+});
 
 export default dataBaseConnection
